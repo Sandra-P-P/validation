@@ -1,0 +1,48 @@
+{
+    "application": [
+        {
+            "name": "",
+            "path": "",
+            "primary_endpoints": [],
+            "failover_endpoints": [],
+            " path_rewrite": "",
+            " outlier_detection": {
+                "consecutive_5xx": null,
+                "base_ejection_time": null,
+                "max_ejection_time": null
+            },
+            "session_affinity": {
+                "generate_sticky_session": false,
+                "cookie_name": null,
+                "cookie_path": null
+            },
+            "connection_timeout": null,
+            "max_requests_per_connection": null,
+            "keepalive": {
+                "enabled": true,
+                "tcp_keepalive": {
+                    "keepalive_probes": 1,
+                    "keepalive_interval": 60,
+                    "keepalive_time": 10
+                }
+            },
+            "max_connections": null,
+            "response_timeout": 15,
+            "healthcheck": {
+                "timeout": 3,
+                "interval": 5,
+                "unhealthy Threshold": 3,
+                "healthy Threshold": 1,
+                "http": {
+                    "host": "",
+                    "path": "/health",
+                    "expectedResponse": {
+                        "start":200,
+                        "end":299
+                    }
+
+                }
+            }
+        }
+    ]
+}
